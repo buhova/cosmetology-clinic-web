@@ -1,0 +1,15 @@
+.advantages-card {
+  width: 316px;
+  height: 180px;
+  box-shadow: 0px 4px 4px 0px #a8c6f561;
+  border-radius: 24px;
+  padding: 24px 32px;
+
+  @media screen and (min-width: $bp-desktop) {
+    border-radius: 32px;
+  }
+
+  &__icon {
+    fill: var(--color-brand-light);
+  }
+}

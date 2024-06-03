@@ -1,0 +1,128 @@
+/* FOOTER */
+.footer {
+  position: relative;
+  background-image: url('../images/footer-background.png');
+  background-color: var(--color-brand-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 56px;
+
+  &::after {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-image: url('../images/footer-cosmetic.png');
+    content: '';
+
+    @media screen and (max-width: $bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+      text-align: left;
+      gap: 16px;
+    }
+  }
+
+  &__nav {
+    gap: 42px;
+  }
+
+  &__address {
+    gap: 8px;
+  }
+
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
+
+  &__link-list,
+  &__address-info {
+    flex-grow: 1;
+  }
+
+  &__link-list {
+    display: grid;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 16px;
+    }
+  }
+
+  /* FOOTER LINK */
+  &__link,
+  &__address-link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    line-height: 1.17;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  // &__address-link {
+  //   display: none;
+
+  //   @media screen and (min-width: $bp-tablet) {
+  //     display: grid;
+  //     flex-grow: 1;
+  //   }
+  // }
+
+  &__link:hover,
+  &__address-link:hover {
+    color: var(--color-brand-light);
+  }
+
+  &__icon-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-grow: 1;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      justify-content: left;
+    }
+  }
+
+  &__address-icon {
+    fill: var(--color-primary-light);
+    transition: fill 0.2s;
+  }
+
+  &__address-icon:hover {
+    fill: var(--color-brand-light);
+  }
+
+  &__address-copyright {
+    color: var(--color-copy);
+    font-size: 13px;
+    line-height: 1.17;
+    text-decoration: none;
+  }
+}

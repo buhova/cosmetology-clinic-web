@@ -1,0 +1,27 @@
+/* Кожну секцію поміщяємо в div-контейнер
+ для розділення і вирівнення контенту */
+.section {
+  padding: 48px 0;
+  /* відступ між контейнерами ділена пополам,
+  бо внутрішній відступ застосовується зверху
+  і знизу*/
+
+  &__title {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.17;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-family: Play, sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 1.15;
+    }
+
+    &--centered {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+  }
+}

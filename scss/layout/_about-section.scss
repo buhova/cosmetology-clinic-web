@@ -1,0 +1,106 @@
+.about-section {
+  &__container {
+    display: flex;
+    gap: 30px;
+
+    @media screen and (min-width: $bp-desktop) {
+      height: 695px;
+    }
+  }
+
+  &__mobile-title {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.17;
+
+    @media screen and (min-width: $bp-desktop) {
+      font-family: Play, sans-serif;
+      font-size: 64px;
+      line-height: 1.15;
+    }
+  }
+
+  &__content {
+    padding: 40px 0px;
+    max-width: 710px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__photo {
+    position: relative;
+    display: block;
+  }
+
+  &__photo-before,
+  &__photo-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  // &__photo-before {
+  //   padding: 0px 180px;
+  // }
+
+  &__photo-after {
+    padding: 370px 170px;
+  }
+
+  /* Stars field*/
+  &__photo {
+    &::before,
+    &::after {
+      position: absolute;
+      background-repeat: no-repeat;
+      content: '';
+      animation-name: blink;
+      /* animation-iteration-count: infinite; */
+      animation-duration: 5s;
+    }
+
+    &::before {
+      width: 64px;
+      height: 64px;
+      left: 130px;
+      bottom: 270px;
+      background-image: url(../images/large-star.png);
+    }
+
+    &::after {
+      width: 40px;
+      height: 40px;
+      left: 450px;
+      top: 30px;
+      background-image: url(../images/medium-star.png);
+    }
+  }
+
+  &__div-forlittle-star::before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 280px;
+    left: 440px;
+    background-image: url(../images/small-star.png);
+    content: '';
+    animation-name: blink;
+    /* animation-iteration-count: infinite; */
+    animation-duration: 5s;
+  }
+  /* Stars field end */
+
+  &__circle {
+    width: 100%;
+    border-radius: 200px;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+      position: relative;
+    }
+  }
+}
