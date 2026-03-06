@@ -1,4 +1,5 @@
-🩺 Cosmetology Clinic Web
+# 🩺 Cosmetology Clinic Web
+
 [🌐 Live Demo](https://buhova.github.io/cosmetology-clinic-web/)
 
 A responsive website for a cosmetology clinic showcasing services, staff, and consultation booking. Designed to provide clients with a smooth and engaging user experience.
